@@ -8,24 +8,28 @@
 :root{
     --gradient: linear-gradient(to right, white, red, orange);
     --yellow: #f3b42e;
-
+    --grey-background: #e4dada5d;
+    --red-color:#bd1414;
 }
 *, html{
     margin: 0;
     padding: 0;
     max-width: 100%;
+   
 }
-/* .container_{
-
-} */
 body{
     font-family: Inter+Tight;
     line-height: 1.5;
-
 }
 h1{
     font-size: 50px;
 
+}
+p{
+    
+}
+h3{
+    margin-bottom: 10px;
 }
 .icon{
     width: 10%;
@@ -36,7 +40,7 @@ h1{
     height: 14vh;
     box-shadow: 2px 2px 4px rgb(0, 0, 0, 0.2);
     z-index: 20;
-    background-color: grey;
+    background-color: rgb(194, 125, 125);
     display: flex;
     align-items: center;
     position: fixed;
@@ -49,30 +53,31 @@ nav{
     text-align: center;
     margin-left: -15%;   
 }
+
 .btn{
     width: 70%;
     border: 1px solid black;
     padding: 5px;
     cursor: pointer;
-
 }
-
 .btn:hover .dropdown_div{
     cursor: pointer;
     display: flex;
     flex-direction: column;
-   
 }
 .dropdown_div{
     position: absolute;
     display: grid;
     display: none;
+    transition: .8s;
     background-color: white;
-  
+    border:  0;
 }
-.dropdown_div:hover{
-    color: white;
-   
+.dropdown_div:hover > :not(:hover){
+    opacity: .5;  
+    transition: .3s;
+    
+
 }
 .btn_on_dropdowns{
     padding: 5px;
@@ -142,13 +147,12 @@ nav{
 .text_signup:hover .bigbox_amazon{
     display: block;
 }
-
 .bigbox_amazon{
     width: 15%;
     background-color: white;
     transition: .5s;
 }
-.bigbox_amazon:hover> :not(:hover){
+.bigbox_amazon:hover> :not(:hover) .parent{
     opacity: 0.5;
     transition: .5s;
     
@@ -169,7 +173,7 @@ nav{
     transition: .5s;
     opacity: 1;
 }
-.small_btn:hover{
+.small_btn:hover {
     color: white;
 }
 .btn_grid{
@@ -256,20 +260,6 @@ button:hover{
 }
 /* trial at animanated scroll */
 
-.grid_numbers{
-    animation: appear 1s linear;
-}
-@keyframes appear {
-    from{
-        opacity: 0.6;
-        scale: (0.6);
-    }
-    to{
-        opacity: 1;
-        scale: 1;
-    }
-}
-
 .one{
     font-weight: bold;
     display: grid;
@@ -299,11 +289,17 @@ button:hover{
 }
 .itembutton{
     font-weight: bold;
-   border: 2px solid black;
+    border: 1px solid var(--yellow);
     margin: auto;
     width: 50%;
     height: 40px;
     border-radius: 8px;
+    background-color: #f3b42e;
+    transition: .3s;
+}
+.itembutton:hover{
+    color: white;
+    background-color: #f3b42e;
 }
 .foot_one{
     display: grid;
@@ -341,9 +337,13 @@ button:hover{
     background-image: url(assets-slides/squeeze.png);
     background-position: 270px;
 }
+.five_section{
+    margin-bottom: 10vh;
+}
 .five_section_b{
+    
     height: 50vh;
-    background-color: bisque;
+    background-color: var(--grey-background);
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     width: 80%;
@@ -356,5 +356,23 @@ button:hover{
     display: inline-block;
     vertical-align: top;
     margin: auto;
-    border: 2px solid blueviolet;
+    
+   
+ 
+}
+p:hover{
+    text-decoration: 2px solid var(--red-color) underline;
+    cursor: pointer;
+}
+.cursor_underline{
+    color: var(--red-color);
+    cursor: pointer;
+}
+.cac{
+    width: 70%;
+}
+.affiliates{
+    width: 100%;
+    display: flex;
+    margin-left: 60%;
 }
