@@ -15,11 +15,12 @@
     margin: 0;
     padding: 0;
     max-width: 100%;
-   
+    
 }
 body{
     font-family: Inter+Tight;
     line-height: 1.5;
+    
 }
 h1{
     font-size: 50px;
@@ -41,16 +42,16 @@ h3{
     display: flex;
     align-items: center;
     position: fixed;
+    
 }
-
 nav{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;   
     width: 40%;
     text-align: center;
     margin-left: -15%;   
+    
 }
-
 .btn{
     width: 70%;
     border: 1px solid black;
@@ -84,6 +85,7 @@ nav{
    width: 30%;
    align-items: center;
    text-align: center;
+   
 }
 .cart{
     font-size: 30px;
@@ -94,6 +96,7 @@ nav{
     border-radius: 5px;
     outline: 2px solid rgb(55, 140, 219);
     cursor: pointer;
+    
 }
 .fa-cart-shopping:hover{
     transform: scale(1.2);
@@ -148,6 +151,7 @@ nav{
     width: 15%;
     background-color: white;
     transition: .5s;
+    
 }
 .bigbox_amazon:hover> :not(:hover) .parent{
     opacity: 0.5;
@@ -193,6 +197,7 @@ nav{
 .hero{
     height: 80vh;
     background-color: rgb(144, 180, 159);
+    
 }
 .hero_text{
     padding-top: 30vh;
@@ -233,6 +238,7 @@ nav{
     display: grid;
     grid-template-columns: 1fr 4fr;
     column-gap: 1%;
+    
 }
 .in_margin{
     column-gap: 2%;
@@ -248,15 +254,73 @@ button:hover{
     display: grid;
     color: rgb(145, 135, 235);
     grid-template-columns: 1fr 1fr 1fr 1fr;
-}
-@media (max-width:600px) {
-    .grid_numbers{
-        display: block;
-    }
     
 }
-/* trial at animanated scroll */
-
+@media (max-width:480px) {
+    .grid_numbers{
+        display: grid;
+        grid-template-columns: 1fr;
+        width: 50vh;
+        margin-left: 25%;
+        height: 10%;
+    } 
+    .in_margin{
+        display: none;
+    }
+    .hero{
+        height: 40%;
+    }
+    .translating_head{
+        font-size: 30px;
+    }
+    .under_hero{
+        font-size: 15px;
+        padding-bottom: 50px;
+    }.itemimage{
+        margin: auto;
+        width: 80%;
+        height: 100%;
+    }
+    nav{
+        display: none;
+    }
+    .icon{
+        width: 20%;
+        margin-left: -10px;
+    }
+    .register{
+        width: 60%;
+    
+        
+    }
+    .text_signup{
+        font-size: 14px;
+        width: 30%;
+        border: 0;
+    }
+    .text_signup:hover{
+        display: none;
+        
+    }
+    .cart{
+        font-size: 20px;
+        margin-left: 2px;
+    }
+     .btn_grid{
+        display: none;
+        grid-template-columns: 1fr;
+        width: 100%;
+    }
+    .log_out{
+        background-color: white;
+        padding: 8px;
+        border-radius: 10px;
+        font-weight: 500;
+    }
+    .hi{
+        display: none;
+    }
+}
 .one{
     font-weight: bold;
     display: grid;
@@ -265,18 +329,17 @@ button:hover{
     height: 80vh;
 }
 .itemname{
-    border: 2px solid black;
-   
+    border: 1px solid black;
 }
 .itemdescription{
-    border: 2px solid black;
+    border: 1px solid black;
 }
 .itemcost{
-    border: 2px solid black;
+    border: 1px solid black;
 }
 .itemimage{
     background-image: var(--gradient);
-    border: 2px solid black;
+    border: 1px solid black;
     border-radius: 10px;
     color: aliceblue;
 }
@@ -318,6 +381,7 @@ button:hover{
     height: 60vh;
     background-color: rgb(114, 177, 177);
     margin-top: 7vh;
+    
 }
 .onk{
     border: 2px solid rgb(226, 92, 43);
@@ -326,16 +390,22 @@ button:hover{
     display: grid;
     grid-template-columns: 1fr 1fr;
     justify-content: space-between;
-    height: 20vh;
+    height: 13vh;
     background-color: #72b1b1;
     margin-top: 7vh;
     text-align: center;
     align-items: center;
     background-image: url(assets-slides/squeeze.png);
     background-position: 270px;
+    
 }
 .five_section{
-    margin-bottom: 10vh;
+    margin-bottom: 5vh;
+    
+}
+.five_section_b_wrap{
+    margin-top: 6vh;
+    
 }
 .five_section_b{
     
@@ -353,11 +423,8 @@ button:hover{
     display: inline-block;
     vertical-align: top;
     margin: auto;
-    
-   
- 
 }
-p:hover{
+.underlined_p:hover{
     text-decoration: 2px solid var(--red-color) underline;
     cursor: pointer;
 }
@@ -369,7 +436,30 @@ p:hover{
     width: 70%;
 }
 .affiliates{
-    width: 100%;
+    width: 40%;
     display: flex;
-    margin-left: 60%;
+    margin-left: 40%;
+    overflow: hidden;
+}
+@media (max-width:480px) {
+    .five_section_b{
+        display: grid;
+        grid-template-columns: 1.8fr 1.2fr;
+        column-gap: 5%;
+        row-gap: 10%;
+        margin: 15% auto;
+        background-color: white;
+        width: 100%;
+    }
+    .affiliates{
+        display: none;
+    }
+    .foot_three{
+        width: 100%;
+    }
+    .cac{
+        width: 100%;
+        margin-left: 50%;
+    }
+
 }
