@@ -31,6 +31,7 @@ h3{
 }
 .icon{
     width: 10%;
+
 }
 .header_container{
     justify-content: space-between;
@@ -74,8 +75,6 @@ nav{
 .dropdown_div:hover > :not(:hover){
     opacity: .5;  
     transition: .3s;
-    
-
 }
 .btn_on_dropdowns{
     padding: 5px;
@@ -96,11 +95,9 @@ nav{
     border-radius: 5px;
     outline: 2px solid rgb(55, 140, 219);
     cursor: pointer;
-    
 }
 .fa-cart-shopping:hover{
     transform: scale(1.2);
-
 }
 .input_search{
     width: 80%;
@@ -112,7 +109,6 @@ nav{
     border-radius: 30px;
     align-items: center;
     background-color: white;  
-    
 }
 .input{
     margin-left: 15px;
@@ -264,8 +260,14 @@ button:hover{
         margin-left: 25%;
         height: 10%;
     } 
+    body{
+        width: 480px;
+    }
     .in_margin{
         display: none;
+    }
+    .input_search{
+       display: none;
     }
     .hero{
         height: 40%;
@@ -284,15 +286,17 @@ button:hover{
     nav{
         display: none;
     }
+    .header_container{
+        height: 10vh;
+    }
     .icon{
         width: 20%;
-        margin-left: -10px;
+        margin-left: 20px;
     }
     .register{
-        width: 60%;
-    
-        
+        width: 20%;
     }
+
     .text_signup{
         font-size: 14px;
         width: 30%;
@@ -300,7 +304,6 @@ button:hover{
     }
     .text_signup:hover{
         display: none;
-        
     }
     .cart{
         font-size: 20px;
@@ -319,6 +322,19 @@ button:hover{
     }
     .hi{
         display: none;
+    }
+}
+.log_out{
+    display: none;
+}
+.hamburger{ 
+    display: none;
+}
+@media (max-width:480px) {
+    .fa-bars{
+        margin-right: 15px;
+        font-size: 25px;
+       
     }
 }
 .one{
